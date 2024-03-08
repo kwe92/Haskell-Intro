@@ -23,7 +23,7 @@
 
 --   - the result of a known input
 
--- Examples:
+-- Pattern Matching on Function Parameters Examples:
 
 -- luckySeven `has type of` (Integral-Type-Class type_variable) function-arrow => type_variable right-arrow -> ReturnType
 luckySeven :: (Integral a) => a -> String
