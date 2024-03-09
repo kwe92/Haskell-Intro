@@ -1,6 +1,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 
 {-# HLINT ignore "Move guards forward" #-}
+{-# HLINT ignore "Redundant bracket" #-}
 
 -- Recursive Functions
 
@@ -8,7 +9,7 @@
 --   - a way to declare what something is
 --   - used in functional languages instead of for and while loops
 
--- Edge Condition
+-- Edge Condition (Base Case)
 
 --   - typically explicity defined
 --   - required for a recursive function to terminate
@@ -78,3 +79,38 @@ maximum' (x : xs) -- pattern 3 with guards
   | otherwise = maxTail
   where
     maxTail = maximum' xs
+
+-- Replicate' Example:
+-- TODO: Draw replicate' 3 42 on paper
+replicate' :: (Num i, Ord i) => i -> a -> [a]
+replicate' n x
+  | n <= 0 = [] -- pattern 1 and edge condition
+  | otherwise = x : replicate' (n - 1) x -- pattern 2 and catch-all
+
+-- Take' Example:
+-- TODO: Draw take' 3 [6,5,4,3,2] on paper
+take' :: (Num i, Ord i) => i -> [a] -> [a]
+take' n _
+  | n <= 0 = [] -- pattern 1 and edge condition 1
+take' _ [] = [] -- pattern 2 and edge condition 2
+take' n (x : xs) = x : take' (n - 1) xs -- pattern 3 and catch-all
+
+-- Why do we need the type class (Num i, Ord i) => in the examples above
+
+-- Reverse' Example:
+
+reverse' :: (Num a, Ord a) => [a] -> [a]
+reverse' [] = []
+reverse' (x : xs) = (reverse' xs) ++ [x]
+
+-- Repeat Example:
+
+repeat' :: a -> [a]
+repeat' x = x : repeat' x
+
+-- Zip
+
+-- zip' :: [a] -> [b] -> [(a, b)]
+-- zip' _ [] = []
+-- zip' [] _ = []
+-- zip' (x: xs) (y:ys) =
