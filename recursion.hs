@@ -110,7 +110,26 @@ repeat' x = x : repeat' x
 
 -- Zip
 
--- zip' :: [a] -> [b] -> [(a, b)]
--- zip' _ [] = []
--- zip' [] _ = []
--- zip' (x: xs) (y:ys) =
+zip' :: [a] -> [b] -> [(a, b)]
+zip' _ [] = []
+zip' [] _ = []
+zip' (x : xs) (y : ys) = (x, y) : zip' xs ys
+
+-- Elem' Example:
+
+elem' :: (Eq a) => a -> [a] -> Bool
+elem' _ [] = False
+elem' ele (x : xs)
+  | ele == x = True
+  | otherwise = elem' ele xs
+
+-- Quick Sort Example:
+
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x : xs) =
+  let smallerList = quicksort [n | n <- xs, n <= x]
+      biggerList = quicksort [n | n <- xs, n > x]
+   in smallerList ++ [x] ++ biggerList
+
+-- What is The Pattern When Defining Recursive Functions??
