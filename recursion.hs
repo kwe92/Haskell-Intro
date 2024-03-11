@@ -133,3 +133,11 @@ quicksort (x : xs) =
    in smallerList ++ [x] ++ biggerList
 
 -- What is The Pattern When Defining Recursive Functions??
+
+-- Try to create a toLower case function
+-- toLower :: String -> String
+
+-- toLower "" = ""
+
+-- toLower (char:s)
+--     |  elem char ['A'..'Z'] =
