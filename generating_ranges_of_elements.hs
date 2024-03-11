@@ -75,3 +75,5 @@ arr3 = take 12 (repeat 5) -- results in the List [5,5,5,5,5,5,5,5,5,5,5,5]
 -- Replicating a List
 
 arr4 = replicate 12 5 -- results in the List [5,5,5,5,5,5,5,5,5,5,5,5]
+
+-- TODO: Explain Lazy Evaluation in Haskell

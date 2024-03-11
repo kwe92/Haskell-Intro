@@ -90,3 +90,5 @@ n = 43
 --   - explicitly state the type of a variable or function
 --   - examples of type annotations: Dart: String someText | Go: someText String | TypeScript: someText: string | Haskell: someText :: String
 --   - all of the examples can be read as someText `has type of` String
+
+-- TODO: Explain When Type Classes are Needed

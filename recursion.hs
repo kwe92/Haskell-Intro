@@ -3,11 +3,25 @@
 {-# HLINT ignore "Move guards forward" #-}
 {-# HLINT ignore "Redundant bracket" #-}
 
+-- TODO: read through an edit comments
+
 -- Recursive Functions
 
 --   - functions that are used within their own function definition (inside their function body)
 --   - a way to declare what something is
---   - used in functional languages instead of for and while loops
+--   - used in functional languages instead of for and while loops as they can perform the same actions in a more elegant manner
+
+-- Accessing Every Element in a Collection
+
+--   - instead of defining how every element is received using a for or while loop
+--   - declarative languages tell you what it expects by using (x : xs) to accees every element in an iterable
+--   - meaning (head : tail):
+--       - the above syntatic meaning is extract the head of an iterable and return the tail
+--       - the tail is the rest of the list after the head is poped off / ommited
+--       - while purely functional programming uses immutability the syntax (x : xs) can be viewed as poping thr head off of a list
+--         assigning the head of the list (the first element) to x and the rest of the list (the tail) to xs
+--       - this syntax allows you to exhaustively iterate over every element in a List while still retaining immutability
+--       - (head `cons` tail) where cons is the prepend operation in constant-time O(1) can be seen as poping of the head of a list in constant time
 
 -- Edge Condition (Base Case)
 
@@ -81,14 +95,12 @@ maximum' (x : xs) -- pattern 3 with guards
     maxTail = maximum' xs
 
 -- Replicate' Example:
--- TODO: Draw replicate' 3 42 on paper
 replicate' :: (Num i, Ord i) => i -> a -> [a]
 replicate' n x
   | n <= 0 = [] -- pattern 1 and edge condition
   | otherwise = x : replicate' (n - 1) x -- pattern 2 and catch-all
 
 -- Take' Example:
--- TODO: Draw take' 3 [6,5,4,3,2] on paper
 take' :: (Num i, Ord i) => i -> [a] -> [a]
 take' n _
   | n <= 0 = [] -- pattern 1 and edge condition 1
@@ -100,7 +112,7 @@ take' n (x : xs) = x : take' (n - 1) xs -- pattern 3 and catch-all
 -- Reverse' Example:
 
 reverse' :: (Num a, Ord a) => [a] -> [a]
-reverse' [] = []
+reverse' [] = [] -- when there is an empty list passed in either initally or when all elements have been iterated over return an empty list to concatenate too
 reverse' (x : xs) = (reverse' xs) ++ [x]
 
 -- Repeat Example:

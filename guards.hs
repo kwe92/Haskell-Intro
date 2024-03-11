@@ -54,7 +54,8 @@ or' a b
 
 -- Where Bindings
 
---   - a syntactic construct placed at the end of a function to bind values to identifiers scoped locally to the entire function including guards
+--   - a syntactic construct placed at the end of a function to bind expressions to identifiers
+--     scoped locally to the entire function including guards
 --   - placed after the final guard and binds identifiers locally to a function
 --   - where binding are scoped locally to the pattern
 --     and are not shared arross function bodies
