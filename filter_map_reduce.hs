@@ -2,6 +2,8 @@
 
 {-# HLINT ignore "Avoid lambda" #-}
 {-# HLINT ignore "Use product" #-}
+{-# HLINT ignore "Use max" #-}
+{-# HLINT ignore "Eta reduce" #-}
 
 -- Filter
 
@@ -52,6 +54,15 @@ factorial'' n = product [1 .. n]
 
 -- Map Filter Reduce Example
 
+-- takeWhile Function
+
+--   - takes a unary predicate function and a list as an argument
+--   - returns elements from the head of the list until:
+
+--       - an element is evaluated as False for the predicate function
+--       - the list has been exhausted before a failing element was evaluated
+--       - useful to condition infinite lists
+
 sumOfSquares :: (Integral a) => [a] -> a
 sumOfSquares [] = 0
 sumOfSquares xs = sum (takeWhile (< 10000) (filter odd (map (^ 2) xs)))
@@ -74,3 +85,10 @@ findFirstDivisible _ [] = error "there is no element to divide by"
 findFirstDivisible n (x : xs)
   | x `mod` n == 0 && x /= n = x
   | otherwise = findFirstDivisible n xs
+
+-- Scan
+
+--   - returns a sequence of reductions where the final reduction is either the head or last element
+--   - of a List depending on which scan is used on the List
+
+badSortImplementation xs = scanl1 (\acc x -> if x > acc then x else acc) xs
