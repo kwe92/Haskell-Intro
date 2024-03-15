@@ -20,7 +20,7 @@ g :: (Floating a) => a -> a
 g x = x ** 2
 
 fg :: Double -> Double
-fg = f . g
+fg = f . g -- = (f o g)(x) = f(g(x))
 
 -- Example 2:
 
