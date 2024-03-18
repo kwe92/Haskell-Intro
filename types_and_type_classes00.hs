@@ -50,7 +50,7 @@
 --   - :t returns expression :: Type, where :: means `has type of`
 --   - e.g. :t True | True :: Bool | True `has type of` Boolean
 
--- Type Classes
+-- Type Classes | Type Constraint
 
 --   - an interface that defines some behavior a type can perform
 --   - used in combination with type variables to
