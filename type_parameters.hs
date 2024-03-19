@@ -2,10 +2,10 @@
 
 -- Type Constructors | Polymorphic Types
 
---   - takes a type as a value and produces a new type
+--   - takes a type as an argument and produces a new type
 --   - type constructors are themselves not types
 --   - they must have their type parameters asigned some value in this case a type
---   - type constructors are polymorphic types in which their values can be of any type work for its specification
+--   - type constructors are polymorphic types in which their values can be of any type that work for its specification
 --   - typically type classes (type constraints) are ommited from the type declaration and added to the function declarations
 
 -- Type Parameters

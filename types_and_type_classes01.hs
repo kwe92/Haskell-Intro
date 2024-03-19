@@ -1,6 +1,6 @@
 -- TODO: Edit Comments
 
--- Defining New Data Types
+-- Defining New Data Types | type definition with data keyword
 
 --   - similar to how you can define your own types with classes and the <class> keyword in imperative
 --     OO languages
@@ -40,6 +40,7 @@
 
 -- Value Constructors | EVERYTHING IS A FUNCTION!!!
 
+--   - creates values of specific types
 --   - they specify the different values the newly constructed type can have
 --   - similar to class constructors in imperative languages
 --     implying they are function used to instantiate a type

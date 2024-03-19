@@ -26,7 +26,6 @@
 
 --   - explicit type annotation is unnecessary in most but not all cases
 --   - example of a type that CAN NOT be inferred: read "5"
---   - the read function requires type annotation if used  without specifying the result i.e. read "5" + 0
 
 -- Function Type Declaration
 
@@ -68,13 +67,20 @@ toDouble s = read s + 0.0 :: Double
 s0 = "43.43"
 
 -- show: represents a type as a String | does not work for functions (kinda...i mean value constructors are technically functions) | an abstract way to define toString method
+
+--  read: inverse of show converting a string to a type | requires explicit type annotation if used without specifying the result i.e. read "5" + 0
+
 -- e.g. show 4 returns "4"
 
 -- polymorphic toString function
 toString :: (Show a) => a -> String
 toString = show
 
-n = 43
+n0 = 42
+
+n1 = show 42
+
+n2 = read n1 :: Int -- convert String "42" into an Int 42
 
 -- TODO: Draw Arrow Types
 
