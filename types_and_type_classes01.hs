@@ -25,6 +25,13 @@
 --       - can serve the same purpose as a struct
 --       - less efficient that a struct due to how ADT's are stored in memory compared to Structs
 
+-- Abstract Data Type vs Abstract Data Structure
+
+--   - Abstract Data Types can be seen as Abstract Data Structures with operations (functions / methods) of behavior
+--   - Abstract Data Structures can be viewed as type declarations without implementations
+--   - the terms are often used interchangeably to refer to the same concept
+--   - type declarations are both abstract data structures and abstract data types
+
 -- Abstract Data Type (ADT) vs Struct Memory Storage
 
 --   - memory is one giant array indexable by pointer/reference
