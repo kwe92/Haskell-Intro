@@ -1,10 +1,11 @@
--- TODO: Edit Comments
+-- TODO : Edit Comments
 
 -- Guards
 
---   - control flow statements (boolean conditions) for patterns
---   - concise readable alternatives to if else statements in patterns
+--   - a way to add boolean expressions to patterns without if else statements
+
 --   - if the guard evaluates to true then the pattern is executed
+
 --   - if the guard evaluates to false then the check drops through
 --     to the next guard until a guard that evaluates to true is reached
 --     or the otherwise statement is reached

@@ -8,44 +8,67 @@ module GeometryV1
   )
 where
 
--- TODO: Edit comments
-
 -- Modules | Modularity | Abstraction Technique
 
 --   - a Haskell script is flagged as a module when the module keyword is used followed by the where keyword
---   - modules are a way to keep code decoupled in haskell and how we create programs
---   - custom modules must be as the same level of the import script\
---     composed on small constituent parts
---   - modules keep code D.R.Y by making code reusable and hiding impleentation details (function body)
---     no matter how the function body is implemented the function should return what it states it will return in its specification to the callings cient
+
+--   - modules are a way to keep code decoupled and how we create systems made from small interrelated components
+
+--   - custom modules must be at the same level of the import script
+
+--   - modules keep code D.R.Y by making code reusable and hiding implementation details (function body)
+--     no matter how the function body is implemented the function should return what its specification dictates
+
 --   - modularity is also a form of abstraction allowing engineers to decompose their system into smaller interrelated constituent parts
---   - reasoning about small components makes the system more manageable and easier to modify as you are working in isolation so you dont have
---     to worry about details that are not relivent to the immediate problem
---   - reduces the propagation of effects throughout a system
---   - highlights concepts such as Single Responsibility Principle / Do One Thing | Smaller Is Better
+
+--   - reasoning about small components makes a system more manageable and easier to modify
+--     as you are working in isolation not worrying about details that are not relivent to the immediate problem
+
+--   - modularity also reduces the propagation of effects throughout a system if done properly
+
+--   - highlights concepts such as `Single Responsibility Principle / Do One` Thing and `Smaller Is Better`
 
 -- Breaking Apart Big Modules | Sub-Modules
 
 --   - large modules can be broken apart into sub modules
+
 --   - you can name a folder with a capital letter denoting the module name
---   - this is smilar to Go Lang
+
+--   - this is similar to Go Lang
+
 --   - each .hs script can have its own name accosiated with the sub-module
+
 --   - the syntax:
---       - <module> <module_name_matching_folder_name.sub_module_name> (export1, export2, ..., exportN) <where>
---   - separate modules can have functions with the same name
---   - if separate modules have functions with the same name then its best to import the modules as fully qualified modules
+
+--       - <module keyword> <module_name_matching_folder_name.sub_module_name> (export1, export2, ..., exportN) <where>
+
+--       - separate modules can have functions with the same name
+
+--       - modules that have functions with the same names should be imported as fully qualified modules
 
 -- Module Exports
 
---   - exports must be explicitly stated similar to typescript for javascript
---   - exports directives listed between parentheses at the begining of a script just like imports
+--   - exports must be explicitly stated in Haskell similar to TypeScript, JavaScript or Java
+
+--   - unlike Dart where entities are implicitly public and explicitly private denoted by a leading underscore
+
+--   - similar to imports export directives are listed between parentheses at the begining of a script
+
 --   - e.g.
---       - <module> <module_name> (export1, export2, ..., exportN) <where>
+
+--       - <module keyword> <module_name> (export1, export2, ..., exportN) <where>
 
 -- Type Alias
 
---   - a type aliases are used to shorten the name of a type
---     or to give a type annotation a meaningful name for yourself and other engineers
+--   - a type alias known as type synonym in Haskell are used to shorten the name of an existing type
+
+--   - they can also serve as documentation for yourself and other engineers
+
+-- Example of Type Synonym: Removing Ambiguity
+
+--   - the type Double -> Double -> Double -> Double can have many interpretations
+--   - at the highest level it is a function that takes three arguments of type Double
+--     and returns a Double but its implementation is ambiguous
 
 type UnaryRationalNumFunc = Double -> Double
 

@@ -59,7 +59,9 @@ powOfFive = powOf 5
 
 --   - infix functions (binary functions) can be partially applied
 --     by only supplying one of the operands surrounded by parentheses
+
 --   - you can pick which operand state is saved in the closure returned
+
 --   - the process of partial application returns a unary closure
 
 -- Partial Application

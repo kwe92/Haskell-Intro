@@ -1,7 +1,5 @@
 import Data.List (elemIndex)
 
--- TODO: Edit Comments
-
 -- Deriving Type Classes
 
 --   - user defined data types can derive (inherit)
@@ -64,13 +62,13 @@ p1 = createPerson "Baki" "Hanma" 14
 --   - the values compaired must also be part of the Eq type class
 --     if the values (fields) are part of the Eq type class then those values are compared
 
---   - removing the need to overload operators to define equality for types
+--   - removing the need to overload operators to define equality for newly declared types
 
 -- Enums (Enumerated Types)
 
 --   - when declaring a type the value constructors are ordered from left to right least to greatest respectively
 
---   - if a value constructor has no parameters the value of the constructor is the name of the value constructor
+--   - if a value constructor has no parameters the value is its name
 
 --   - the afromentioned property allows you to create enums out of a set of value constructors without parameters
 
