@@ -10,6 +10,11 @@
 
 data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Eq, Read)
 
+instance Functor Tree where
+    fmap :: (a -> b) -> Tree a -> Tree b
+    fmap _ EmptyTree = EmptyTree
+    fmap f (Node val ltree rtree) = Node (f val) (fmap f ltree) (fmap f rtree)
+
 createTree :: a-> Tree a
 
 createTree val = Node val EmptyTree EmptyTree

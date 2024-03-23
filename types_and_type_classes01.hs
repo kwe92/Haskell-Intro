@@ -126,7 +126,7 @@ sr0 = SymmetricalRectangle
 
 -- Data Type WIth Single Value Constructor
 
-data Point = Point Float Float -- the value constructor name is the same as the type name | just like the class name matches the name of the class constructor function in most imperative OO languages
+data Point = Point Float Float -- the value constructor name is the same as the type name | just like the class name matches the name of the class constructor function in most imperative OO languages | the value constructure has explicit types instead of being polymorphic
 
 -- surfaceArea a polymorphic function that pattern matches on the Shape data type defined
 

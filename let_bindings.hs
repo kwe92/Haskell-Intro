@@ -1,18 +1,25 @@
--- TODO: Edit Comments
-
 -- let in bindings
 
---   - let allows you to bind values locally
---   - let bindings are also expressions
---   - can be a way to have multiple values bound within a function body
+--   - let bindings allow you to bind values locally within most expressions
+
+--   - let bindings are themselves expressions
+
+--   - let bindings can be a way to have multiple values bound within a function body locally
+
 --   - when used inline you need to separate each binding by a semicolon ;
---     semi colons are ommited when used within function bodies on multiple lines
+
+--     semi colons can be omitted when used within function bodies on multiple lines
+
+-- TODO: Edit Comments
 
 -- let bindings and list comprehensions
 
 --   - let bindings can be used inside of list comprehensions
+
 --   - they are only visible to the output function
+
 --   - there is not hoisting in a list comprehension so the let binding isn't visible to the binding from the iterables above it
+
 --   - that are defined before predicate functions
 --   - the in keyword is ommited as the binding is scoped to the output function
 

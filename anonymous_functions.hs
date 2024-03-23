@@ -14,7 +14,7 @@
 --   - can be used instead of a where binding within a function
 --   - can be used instead of a let binding within a function
 --   - many more reasons
--- lLambda Function Example 1
+-- Lambda Function Example 1
 
 bmiCalc :: (RealFloat a) => [(a, a)] -> [a]
 bmiCalc xs = [(\w h -> w / h ** 2 * 703) w h | (w, h) <- xs]
