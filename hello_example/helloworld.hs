@@ -1,3 +1,5 @@
+-- TODO: Edit Comments
+
 -- Compiling Haskell Script
 
 --   - ghc --make <script_name>| omitting the .hs
@@ -26,11 +28,11 @@
 main :: IO () -- the type of `main` is an IO action
 main = putStrLn "In the begginer's mind there are many possibilities, in the experts mind there are few."
 
--- putStrLn
+-- putStrLn | standard output Stream | stdout
 
 --   - similar to print in Dart or fmt.Println in Go Lang
 
---   - prints string to console with suffixing new line
+--   - prints string to console (standard output / stdout) with suffixing new line
 
 --   - putStrLn type signature:
 
