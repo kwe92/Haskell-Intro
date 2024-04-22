@@ -1,6 +1,6 @@
 -- Functions in Haskell
 
---   - functions are objects (first class citizens) which implying they have a type signature
+--   - functions are objects (first class citizens) which imply they have a type signature
 --   - a functions type signature is also known as its method signature in OOP languages
 --   - in Haskell a function signature must have an associated binding (implementation)
 
